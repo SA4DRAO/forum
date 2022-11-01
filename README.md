@@ -1,16 +1,9 @@
-# forum
+# Innovation Garage's Forum
 
-A new Flutter project.
+<img src="https://nitw.ac.in/cii/static/media/IG-logo-WITHOUT-BG.97650f70.png" width="200" height="200">
+Forum Developed for use within the National Institute of Technology, Warangal
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Features:
+* Feature 1
+* Feature 2
+* Feature 3
