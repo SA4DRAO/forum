@@ -68,7 +68,9 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
-          // const EventCard(),
+          const Expanded(
+            child: EventCard(),
+          )
         ],
       ),
     );

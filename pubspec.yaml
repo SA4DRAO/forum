@@ -76,6 +76,7 @@ flutter:
      - assets/images/Profileicon.png     
      - assets/images/ArrowLeft.png    
      - assets/fonts/ 
+     - assets/images/sample_event.png
 
   fonts:
     - family: Satoshi
