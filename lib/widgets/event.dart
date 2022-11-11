@@ -25,7 +25,7 @@ class EventCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Padding(
+        Container(
           padding: const EdgeInsets.all(8.0),
           child: Card(
             color: const Color(0xff111111),
@@ -81,38 +81,31 @@ class EventCard extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width,
-                  child: const Padding(
-                    padding: EdgeInsets.fromLTRB(12, 8, 12, 0),
-                    child: Text(
-                      "Heading of the Event goes Here",
-                      style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.white,
-                          height: 2,
-                          fontWeight: FontWeight.w700),
-                      textAlign: TextAlign.left,
-                    ),
+                  padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
+                  child: const Text(
+                    "Heading of the Event goes Here",
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white,
+                        height: 2,
+                        fontWeight: FontWeight.w700),
+                    textAlign: TextAlign.left,
                   ),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width,
-                  child: const Padding(
-                    padding: EdgeInsets.fromLTRB(12, 4, 12, 8),
-                    child: ReadMoreText(
-                      "The description goes her rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xffC8C8C8),
-                          height: 1.5,
-                          fontWeight: FontWeight.w500),
-                      textAlign: TextAlign.left,
-                      trimLines: 3,
-                      trimMode: TrimMode.Line,
-                      moreStyle:
-                          TextStyle(decoration: TextDecoration.underline),
-                      lessStyle: TextStyle(color: Colors.transparent),
-                    ),
+                  padding: const EdgeInsets.fromLTRB(12, 4, 12, 8),
+                  child: const ReadMoreText(
+                    "The description goes her rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xffC8C8C8),
+                        height: 1.5,
+                        fontWeight: FontWeight.w500),
+                    textAlign: TextAlign.left,
+                    trimLines: 3,
+                    trimMode: TrimMode.Line,
+                    moreStyle: TextStyle(decoration: TextDecoration.underline),
+                    lessStyle: TextStyle(color: Colors.transparent),
                   ),
                 ),
                 Container(
@@ -204,7 +197,7 @@ class EventCard extends StatelessWidget {
                       style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all(Colors.white)),
-                      child: Container(
+                      child: SizedBox(
                         width: MediaQuery.of(context).size.width - 100,
                         height: 50,
                         child: const Center(

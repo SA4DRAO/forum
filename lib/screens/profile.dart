@@ -35,7 +35,7 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: ListView(children: [
+            child: ListView(children: const [
               NameField(),
               EmailField(),
               PhoneField(),

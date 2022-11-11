@@ -21,7 +21,7 @@ class Splash extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 200,
               child:

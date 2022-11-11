@@ -29,7 +29,7 @@ class _AuthenticationState extends State<Authentication> {
             const SizedBox(
               height: 30,
             ),
-            Container(
+            SizedBox(
               width: 300,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -67,7 +67,7 @@ class _AuthenticationState extends State<Authentication> {
               ),
             ),
             const SizedBox(height: 10),
-            Container(
+            SizedBox(
               width: 300,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -106,7 +106,7 @@ class _AuthenticationState extends State<Authentication> {
             ),
             Transform.scale(
               scale: 0.4,
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 200,
                 child:
