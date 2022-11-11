@@ -1,4 +1,4 @@
-package com.example.forum
+package com.ig.forum
 
 import io.flutter.embedding.android.FlutterActivity
 

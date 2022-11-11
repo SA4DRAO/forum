@@ -84,12 +84,30 @@ class PostBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print(postsList.length);
-
-    return ListView.builder(
-      itemCount: postsList.length,
-      itemBuilder: (_, index) {
-        return EventCard();
-      },
-    );
+    // return ListView.builder(
+    //   itemCount: postsList.length,
+    //   itemBuilder: (_, index) {
+    //     return EventCard(
+    //         title: 'Hello World',
+    //         body: "This is a test",
+    //         likes: 5,
+    //         updated: false,
+    //         sId: "lol",
+    //         registrants: 42,
+    //         duration: "duration",
+    //         venue: "venue",
+    //         date: "date");
+    //   },
+    // );
+    return const EventCard(
+        title: 'Hello World',
+        body: "This is a test",
+        likes: 5,
+        updated: false,
+        sId: "lol",
+        registrants: 42,
+        duration: "duration",
+        venue: "venue",
+        date: "date");
   }
 }
