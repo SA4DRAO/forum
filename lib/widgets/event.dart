@@ -2,24 +2,29 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
-class Event extends StatefulWidget {
-  const Event({super.key});
-
-  @override
-  State<Event> createState() => _EventState();
-}
-
-class _EventState extends State<Event> {
-  @override
-  Widget build(BuildContext context) {
-    return const EventCard();
-  }
-}
-
 class EventCard extends StatelessWidget {
   const EventCard({
     Key? key,
+    required this.title,
+    required this.body,
+    required this.likes,
+    required this.updated,
+    required this.sId,
+    required this.registrants,
+    required this.duration,
+    required this.venue,
+    required this.date,
   }) : super(key: key);
+
+  final String? title;
+  final String? body;
+  final int? likes;
+  final bool? updated;
+  final String? sId;
+  final int? registrants;
+  final String? duration;
+  final String? venue;
+  final String? date;
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +36,9 @@ class EventCard extends StatelessWidget {
             color: const Color(0xff111111),
             child: Column(
               children: [
-                const Text(
-                  "12TH DEC '22",
-                  style: TextStyle(
+                Text(
+                  '$date',
+                  style: const TextStyle(
                     fontFamily: 'SpaceGrotesk',
                     color: Colors.white,
                     fontSize: 16,
@@ -82,9 +87,9 @@ class EventCard extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
-                  child: const Text(
-                    "Heading of the Event goes Here",
-                    style: TextStyle(
+                  child: Text(
+                    '$title',
+                    style: const TextStyle(
                         fontSize: 24,
                         color: Colors.white,
                         height: 2,
@@ -94,9 +99,9 @@ class EventCard extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.fromLTRB(12, 4, 12, 8),
-                  child: const ReadMoreText(
-                    "The description goes her rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-                    style: TextStyle(
+                  child: ReadMoreText(
+                    '$body',
+                    style: const TextStyle(
                         fontSize: 14,
                         color: Color(0xffC8C8C8),
                         height: 1.5,
@@ -104,8 +109,9 @@ class EventCard extends StatelessWidget {
                     textAlign: TextAlign.left,
                     trimLines: 3,
                     trimMode: TrimMode.Line,
-                    moreStyle: TextStyle(decoration: TextDecoration.underline),
-                    lessStyle: TextStyle(color: Colors.transparent),
+                    moreStyle:
+                        const TextStyle(decoration: TextDecoration.underline),
+                    lessStyle: const TextStyle(color: Colors.transparent),
                   ),
                 ),
                 Container(
@@ -113,8 +119,8 @@ class EventCard extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(8, 15, 8, 15),
                     child: Row(
-                      children: const [
-                        Text(
+                      children: [
+                        const Text(
                           "WHEN: ",
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
@@ -123,8 +129,8 @@ class EventCard extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "12th December, 2022",
-                          style: TextStyle(
+                          '$date',
+                          style: const TextStyle(
                               fontSize: 14,
                               color: Color(0xffC8C8C8),
                               height: 1.5,
@@ -139,8 +145,8 @@ class EventCard extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(8, 15, 8, 15),
                     child: Row(
-                      children: const [
-                        Text(
+                      children: [
+                        const Text(
                           "WHERE: ",
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
@@ -150,8 +156,8 @@ class EventCard extends StatelessWidget {
                         ),
                         Expanded(
                           child: Text(
-                            "Room 102, New Academic Building (NAB)",
-                            style: TextStyle(
+                            '$venue',
+                            style: const TextStyle(
                                 fontSize: 14,
                                 color: Color(0xffC8C8C8),
                                 height: 1.5,
@@ -167,8 +173,8 @@ class EventCard extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(8, 15, 8, 15),
                     child: Row(
-                      children: const [
-                        Text(
+                      children: [
+                        const Text(
                           "DEADLINE: ",
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
@@ -178,8 +184,8 @@ class EventCard extends StatelessWidget {
                         ),
                         Expanded(
                           child: Text(
-                            "11th December, 2022",
-                            style: TextStyle(
+                            '$duration',
+                            style: const TextStyle(
                                 fontSize: 14,
                                 color: Color(0xffC8C8C8),
                                 height: 1.5,
