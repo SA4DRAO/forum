@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:forum/google_sign_in.dart';
+import 'package:forum/profile.dart';
 import 'package:provider/provider.dart';
 
 class Authentication extends StatefulWidget {
@@ -82,7 +83,12 @@ class _AuthenticationState extends State<Authentication> {
                       final provider = Provider.of<GoogleSignInProvider>(
                           context,
                           listen: false);
-                      provider.googleLogin();
+                      provider.googleLogin().whenComplete(() => {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: ((context) => ProfilePage())))
+                          });
                     },
                     child: Row(
                       children: const [
