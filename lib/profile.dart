@@ -1,6 +1,8 @@
 import 'package:circular_placeholder/circular_placeholder.dart';
 import 'package:flutter/material.dart';
+import 'package:forum/google_sign_in.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:provider/provider.dart';
 import 'package:validation_textformfield/validation_textformfield.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -8,6 +10,7 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(Provider.of<GoogleSignInProvider>(context).user);
     return Scaffold(
       extendBodyBehindAppBar: false,
       backgroundColor: const Color(0xff111111),

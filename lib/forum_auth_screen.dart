@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:forum/google_sign_in.dart';
+import 'package:forum/profile.dart';
+import 'package:provider/provider.dart';
 
 class Authentication extends StatefulWidget {
   const Authentication({super.key});
@@ -43,7 +46,8 @@ class _AuthenticationState extends State<Authentication> {
                         Expanded(
                           flex: 1,
                           child: Image(
-                            image: AssetImage("assets/images/icons8-google-48.png"),
+                            image: AssetImage(
+                                "assets/images/icons8-google-48.png"),
                             width: 30,
                             height: 30,
                             color: null,
@@ -75,13 +79,24 @@ class _AuthenticationState extends State<Authentication> {
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(const Color(0xff313131))),
-                    onPressed: () {},
+                    onPressed: () {
+                      final provider = Provider.of<GoogleSignInProvider>(
+                          context,
+                          listen: false);
+                      provider.googleLogin().whenComplete(() => {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: ((context) => ProfilePage())))
+                          });
+                    },
                     child: Row(
                       children: const [
                         Expanded(
                           flex: 1,
                           child: Image(
-                            image: AssetImage("assets/images/icons8-google-48.png"),
+                            image: AssetImage(
+                                "assets/images/icons8-google-48.png"),
                             width: 30,
                             height: 30,
                             color: null,
