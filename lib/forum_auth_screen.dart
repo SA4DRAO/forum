@@ -21,7 +21,7 @@ class _AuthenticationState extends State<Authentication> {
               padding: const EdgeInsets.all(50),
               width: MediaQuery.of(context).size.width,
               child: const Image(
-                image: AssetImage("images/forum.png"),
+                image: AssetImage("assets/images/forum.png"),
                 fit: BoxFit.scaleDown,
                 alignment: Alignment.center,
               ),
@@ -43,7 +43,7 @@ class _AuthenticationState extends State<Authentication> {
                         Expanded(
                           flex: 1,
                           child: Image(
-                            image: AssetImage("images/icons8-google-48.png"),
+                            image: AssetImage("assets/images/icons8-google-48.png"),
                             width: 30,
                             height: 30,
                             color: null,
@@ -81,7 +81,7 @@ class _AuthenticationState extends State<Authentication> {
                         Expanded(
                           flex: 1,
                           child: Image(
-                            image: AssetImage("images/icons8-google-48.png"),
+                            image: AssetImage("assets/images/icons8-google-48.png"),
                             width: 30,
                             height: 30,
                             color: null,
@@ -111,13 +111,13 @@ class _AuthenticationState extends State<Authentication> {
                 height: 200,
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Expanded(child: Image.asset("images/prod.png")),
+                  Expanded(child: Image.asset("assets/images/prod.png")),
                   Container(
                     height: 45,
                     width: 2,
                     color: const Color(0xff4D4D4D),
                   ),
-                  Expanded(child: Image.asset("images/ig.png"))
+                  Expanded(child: Image.asset("assets/images/ig.png"))
                 ]),
               ),
             ),
